@@ -1,13 +1,13 @@
-:root {
+:root{
     --cor-de-fundo: #1E1E1E;
-    --verde: #6FFF57;
+    --verde: #ffe057;
     --branco: #FFFFFF;
-    --botao-ativo: #3A375E;
+    --botao-ativo: #5c812b;
     --botao-inativo: rgba(58, 55, 94, 0.5);
-    --texto-fundo: rgba(58, 55, 94, 0.3);
+    --texto-fundo: rgba(93, 151, 16, 0.3);
 }
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap');
-body {
+
+body{
     background-color: var(--cor-de-fundo);
     color: var(--branco);
     font-family: 'Chakra Petch', sans-serif;
@@ -29,7 +29,7 @@ body {
 .titulo-principal span {
     color: var(--verde);
 }
-.botao {
+.botao{
     font-family: "Crakra Petch", sans-serif;
     background-color: var(--botao-inativo);
     color: var(--branco);
@@ -38,39 +38,62 @@ body {
     padding: 1em;
     font-size: 18px;
     align-items: center;
-    width: 100%; 
-border-bottom: 4px solid var(--botao-ativo); 
-border-left: 2px solid var(--botao-ativo); 
-border-right: 2px solid var(--botao-ativo); 
-border-top: none;
+    width: 100%;
+    border-bottom: 4px solid var(--botao-ativo);
+    border-left: 2px solid var(--botao-ativo);
+    border-right: 2px solid var(--botao-ativo);
+    border-top: none;
 }
 .botoes {
     display: block;
 }
 
 @media screen and (min-width: 768px) {
-    .botoes 
+    .botoes {
         display: flex;
     }
+
     .botao:first-child {
-        border-radius: 40px 40px 0 0;
+        border-radius: 40px 0 0 0;
     }
-    
-    @media screen and (min-width: 768px) {
-        .botoes {
-            display: flex;
-        }
-    
-        .botao:first-child {
-            border-radius: 40px 0 0 0;
-        }
-    
-        .botao:last-child {
-            border-radius: 0 40px 0 0;
-        }
+
+    .botao:last-child {
+        border-radius: 0 40px 0 0;
     }
-    .ativo{
+}
+
+
+.ativo{
+    background-color: var(--botao-ativo);
+    border-bottom: 4px solid var(--verde);
+    }
+    .abas-textos{
+        background-color: var(--texto-fundo);
+        padding: 40px;
+        border-radius: 0 0 40px 40px;
+    }
+    .botao.ativo{
         background-color: var(--botao-ativo);
         border-bottom: 4px solid var(--verde);
     }
+    .aba-conteudo.ativo{
+        display:block;   
+    }
+    .aba-conteudo{
+        display: none;
+    }
+    .aba-conteudo-titulo-principal{
+        font-size: 28px;
+        text-align: center;
+    }
+    .aba-conteudo-titulo-secundario{
+        text-align: center;
+        color: var(--verde);
+        text-transform: uppercase;
+    }
+    
+    
+    
+    
+
     
